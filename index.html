@@ -1,0 +1,1973 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Naitik Garments | School Uniform & Stationery</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f6f8fc;
+    color:#172033;
+}
+
+a{
+    text-decoration:none;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:14px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-icon{
+    width:48px;
+    height:48px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#073b8c,#ff7a00);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.logo h2{
+    color:#073b8c;
+}
+
+.logo span{
+    font-size:10px;
+    color:#ff7a00;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.nav-links a{
+    color:#172033;
+    font-weight:600;
+}
+
+.nav-links a:hover{
+    color:#ff7a00;
+}
+
+.call-btn{
+    background:#073b8c;
+    color:white!important;
+    padding:11px 17px;
+    border-radius:25px;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    background:
+    radial-gradient(circle at 90% 20%,rgba(255,122,0,.18),transparent 30%),
+    radial-gradient(circle at 10% 80%,rgba(7,59,140,.12),transparent 30%),
+    #edf4ff;
+}
+
+.hero-container{
+    max-width:1200px;
+    margin:auto;
+    padding:85px 20px;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:50px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    background:#fff0e3;
+    color:#e76500;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    line-height:1.05;
+    color:#073b8c;
+}
+
+.hero h1 span{
+    color:#ff7a00;
+}
+
+.hero p{
+    margin:22px 0 30px;
+    max-width:650px;
+    line-height:1.7;
+    font-size:17px;
+    color:#606b7e;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 23px;
+    border-radius:9px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.primary{
+    background:#ff7a00;
+    color:white;
+}
+
+.primary:hover{
+    background:#dc6500;
+    transform:translateY(-2px);
+}
+
+.secondary{
+    background:#073b8c;
+    color:white;
+}
+
+.secondary:hover{
+    background:#052d6b;
+    transform:translateY(-2px);
+}
+
+.hero-card{
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 20px 50px rgba(7,59,140,.15);
+}
+
+.hero-card h3{
+    color:#073b8c;
+    margin-bottom:20px;
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:15px 0;
+    border-bottom:1px solid #edf0f5;
+}
+
+.feature:last-child{
+    border:none;
+}
+
+.feature-icon{
+    width:45px;
+    height:45px;
+    background:#eef4ff;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+}
+
+.feature small{
+    color:#7b8495;
+}
+
+/* GENERAL */
+
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.small-title{
+    color:#ff7a00;
+    font-size:12px;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+.section-title h2{
+    font-size:38px;
+    color:#073b8c;
+    margin:10px 0;
+}
+
+.section-title p{
+    color:#70798b;
+}
+
+/* CATEGORIES */
+
+.categories{
+    background:white;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.category-card{
+    background:#f8faff;
+    border:1px solid #e5eaf2;
+    border-radius:18px;
+    padding:25px 18px;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.category-card:hover{
+    transform:translateY(-8px);
+    border-color:#ff7a00;
+    box-shadow:0 15px 35px rgba(7,59,140,.12);
+}
+
+.category-icon{
+    width:75px;
+    height:75px;
+    margin:auto auto 15px;
+    background:#edf4ff;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+}
+
+.category-card h3{
+    color:#073b8c;
+    margin-bottom:8px;
+}
+
+.category-card p{
+    font-size:13px;
+    color:#747e90;
+    line-height:1.5;
+}
+
+/* PRODUCTS */
+
+.products{
+    background:#f6f8fc;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.product-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid #e5eaf2;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.product-image{
+    height:190px;
+    overflow:hidden;
+    background:#edf3ff;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.product-info{
+    padding:18px;
+}
+
+.product-info h3{
+    color:#073b8c;
+    margin-bottom:8px;
+}
+
+.product-info p{
+    color:#737d90;
+    font-size:13px;
+    line-height:1.5;
+}
+
+.tag{
+    display:inline-block;
+    margin-top:12px;
+    padding:5px 10px;
+    background:#fff0e3;
+    color:#e76500;
+    border-radius:20px;
+    font-size:10px;
+    font-weight:bold;
+}
+
+/* WHOLESALE */
+
+.wholesale{
+    background:#073b8c;
+    color:white;
+}
+
+.wholesale-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.wholesale h2{
+    font-size:42px;
+    margin:10px 0 20px;
+}
+
+.wholesale h2 span{
+    color:#ff9a3d;
+}
+
+.wholesale p{
+    color:#d8e2f5;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.wholesale-list{
+    display:grid;
+    gap:12px;
+}
+
+.wholesale-box{
+    background:white;
+    color:#172033;
+    padding:30px;
+    border-radius:20px;
+}
+
+.wholesale-box h3{
+    color:#073b8c;
+    margin-bottom:20px;
+}
+
+.order{
+    padding:13px 0;
+    border-bottom:1px solid #e8ecf2;
+    display:flex;
+    justify-content:space-between;
+}
+
+/* CUSTOM TSHIRT */
+
+.custom{
+    background:white;
+}
+
+.custom-box{
+    max-width:1100px;
+    margin:auto;
+    padding:50px;
+    border-radius:25px;
+    background:linear-gradient(135deg,#fff5eb,#edf4ff);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.custom-box h2{
+    font-size:38px;
+    color:#073b8c;
+    margin:10px 0 15px;
+}
+
+.custom-box p{
+    color:#687285;
+    line-height:1.6;
+}
+
+.tshirt{
+    font-size:120px;
+}
+
+/* ABOUT */
+
+.about{
+    background:#f6f8fc;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about h2{
+    color:#073b8c;
+    font-size:40px;
+    margin:10px 0 20px;
+}
+
+.about p{
+    color:#667084;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.points{
+    display:grid;
+    gap:10px;
+    margin-top:20px;
+}
+
+.point{
+    background:white;
+    padding:14px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.about-image{
+    min-height:350px;
+    background:white;
+    border-radius:25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:150px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:white;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-card{
+    background:#f7f9fc;
+    padding:30px;
+    border-radius:20px;
+}
+
+.contact-card h3{
+    color:#073b8c;
+    font-size:25px;
+    margin-bottom:25px;
+}
+
+.contact-item{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.contact-icon{
+    width:45px;
+    height:45px;
+    min-width:45px;
+    background:#edf4ff;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+}
+
+.contact-item strong{
+    display:block;
+    margin-bottom:5px;
+}
+
+.contact-item span{
+    color:#70798b;
+}
+
+.map{
+    background:#edf4ff;
+    border-radius:20px;
+    min-height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#061f49;
+    color:white;
+    padding:45px 20px 25px;
+}
+
+.footer-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h2{
+    margin-bottom:12px;
+}
+
+footer h2 span{
+    color:#ff9a3d;
+}
+
+footer p{
+    color:#b8c4d9;
+    line-height:1.7;
+    font-size:14px;
+}
+
+.footer-links{
+    display:grid;
+    gap:10px;
+}
+
+.footer-links a{
+    color:#b8c4d9;
+}
+
+.copyright{
+    max-width:1200px;
+    margin:30px auto 0;
+    border-top:1px solid rgba(255,255,255,.1);
+    padding-top:20px;
+    text-align:center;
+    color:#93a1b9;
+    font-size:13px;
+}
+
+/* FLOATING */
+
+.floating{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    z-index:900;
+}
+
+.float{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:22px;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+.whatsapp{
+    background:#25d366;
+}
+
+.phone{
+    background:#073b8c;
+}
+
+/* MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(5,20,45,.78);
+    z-index:2000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    background:white;
+    width:min(1000px,100%);
+    max-height:90vh;
+    overflow-y:auto;
+    border-radius:22px;
+    padding:25px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:18px;
+    top:15px;
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:#073b8c;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.modal-title{
+    color:#073b8c;
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:14px;
+    background:#edf3ff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:76px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        padding:20px;
+        box-shadow:0 10px 20px rgba(0,0,0,.08);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero-container,
+    .wholesale-grid,
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .category-grid,
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .custom-box{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:60px 15px;
+    }
+
+    .hero-container{
+        padding:60px 15px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .category-grid,
+    .product-grid,
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .wholesale h2,
+    .about h2{
+        font-size:32px;
+    }
+
+    .custom-box{
+        padding:30px 20px;
+    }
+
+    .custom-box h2{
+        font-size:28px;
+    }
+
+    .tshirt{
+        font-size:90px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+
+<nav class="navbar">
+
+<a href="#home" class="logo">
+
+<div class="logo-icon">
+NG
+</div>
+
+<div>
+<h2>Naitik Garments</h2>
+<span>QUALITY • TRUST • VALUE</span>
+</div>
+
+</a>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<div class="nav-links" id="navLinks">
+
+<a href="#home">Home</a>
+<a href="#categories">Categories</a>
+<a href="#products">Products</a>
+<a href="#wholesale">Wholesale</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+<a class="call-btn" href="tel:9304214883">
+☎ Call Now
+</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-container">
+
+<div>
+
+<div class="badge">
+WHOLESALE & RETAIL AVAILABLE
+</div>
+
+<h1>
+Everything Your
+<br>
+<span>School Needs.</span>
+</h1>
+
+<p>
+Welcome to <b>Naitik Garments</b> — your trusted destination
+for school uniforms, books, stationery, diaries, school bags,
+winter wear and custom printed T-shirts in Lalganj, Vaishali, Bihar.
+</p>
+
+<div class="buttons">
+
+<a href="#categories" class="btn primary">
+🛍 Explore Categories
+</a>
+
+<a href="tel:9304214883" class="btn secondary">
+☎ Call Now
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<h3>Everything Under One Roof</h3>
+
+<div class="feature">
+
+<div class="feature-icon">👔</div>
+
+<div>
+<strong>School Uniform</strong>
+<small>Complete school uniform collection</small>
+</div>
+
+</div>
+
+<div class="feature">
+
+<div class="feature-icon">📚</div>
+
+<div>
+<strong>Books & Stationery</strong>
+<small>Books, copies and daily stationery</small>
+</div>
+
+</div>
+
+<div class="feature">
+
+<div class="feature-icon">❄️</div>
+
+<div>
+<strong>Winter Collection</strong>
+<small>Sweater, blazer, tracksuit & more</small>
+</div>
+
+</div>
+
+<div class="feature">
+
+<div class="feature-icon">👕</div>
+
+<div>
+<strong>Printed T-Shirts</strong>
+<small>Custom printing available</small>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="categories" id="categories">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small-title">WHAT WE OFFER</div>
+
+<h2>Our Categories</h2>
+
+<p>
+Click on any category to see available products.
+</p>
+
+</div>
+
+
+<div class="category-grid">
+
+<div class="category-card" onclick="openGallery('uniform')">
+
+<div class="category-icon">👔</div>
+
+<h3>School Uniform</h3>
+
+<p>
+Shirts, pants, skirts and complete school uniform.
+</p>
+
+</div>
+
+
+<div class="category-card" onclick="openGallery('books')">
+
+<div class="category-icon">📚</div>
+
+<h3>School Books</h3>
+
+<p>
+School books and educational materials.
+</p>
+
+</div>
+
+
+<div class="category-card" onclick="openGallery('stationery')">
+
+<div class="category-icon">✏️</div>
+
+<h3>Stationery</h3>
+
+<p>
+Pens, pencils, copies, notebooks and more.
+</p>
+
+</div>
+
+
+<div class="category-card" onclick="openGallery('diary')">
+
+<div class="category-icon">📔</div>
+
+<h3>School Diary</h3>
+
+<p>
+School diaries and customized diaries.
+</p>
+
+</div>
+
+
+<div class="category-card" onclick="openGallery('tshirt')">
+
+<div class="category-icon">👕</div>
+
+<h3>Printed T-Shirts</h3>
+
+<p>
+School, college, event and custom T-shirts.
+</p>
+
+</div>
+
+
+<div class="category-card" onclick="openGallery('bags')">
+
+<div class="category-icon">🎒</div>
+
+<h3>School Bags</h3>
+
+<p>
+School bags for different age groups.
+</p>
+
+</div>
+
+
+<div class="category-card" onclick="openGallery('winter')">
+
+<div class="category-icon">❄️</div>
+
+<h3>Winter Collection</h3>
+
+<p>
+Sweaters, blazer, tracksuit, cap and socks.
+</p>
+
+</div>
+
+
+<div class="category-card" onclick="openGallery('supplies')">
+
+<div class="category-icon">🏫</div>
+
+<h3>School Supplies</h3>
+
+<p>
+Complete supply solutions for schools.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="products" id="products">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small-title">POPULAR PRODUCTS</div>
+
+<h2>Featured Products</h2>
+
+<p>
+Wholesale and individual purchase available.
+</p>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<div class="product-card" onclick="openGallery('uniform')">
+
+<div class="product-image">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO52z7mNe-XkXN9RCbQmQkpMy2wvhRbUI6hbmZtPoMkA&s=10"
+alt="School Uniform">
+
+</div>
+
+<div class="product-info">
+
+<h3>School Uniform</h3>
+
+<p>
+Complete school uniform collection.
+</p>
+
+<span class="tag">
+VIEW COLLECTION
+</span>
+
+</div>
+
+</div>
+
+
+<div class="product-card" onclick="openGallery('books')">
+
+<div class="product-image">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQqziwrFo6CbL9i6UWEYMANvQzXJbSRYHzauyKXa2jhQ&s=10"
+alt="School Books">
+
+</div>
+
+<div class="product-info">
+
+<h3>School Books</h3>
+
+<p>
+Books and educational materials.
+</p>
+
+<span class="tag">
+VIEW COLLECTION
+</span>
+
+</div>
+
+</div>
+
+
+<div class="product-card" onclick="openGallery('stationery')">
+
+<div class="product-image">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdKbfRcHeF6xOGrSnzTsgeSe2AhsWqp6uEDM_cdmOGug&s=10"
+alt="Stationery">
+
+</div>
+
+<div class="product-info">
+
+<h3>Stationery</h3>
+
+<p>
+Complete school stationery range.
+</p>
+
+<span class="tag">
+VIEW COLLECTION
+</span>
+
+</div>
+
+</div>
+
+
+<div class="product-card" onclick="openGallery('diary')">
+
+<div class="product-image">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJydXQL6NHO6rZdgfPJ4wKlHhHk_ozL2RDOiwQJaK7ow&s=10"
+alt="School Diary">
+
+</div>
+
+<div class="product-info">
+
+<h3>School Diary</h3>
+
+<p>
+School and customized diaries.
+</p>
+
+<span class="tag">
+VIEW COLLECTION
+</span>
+
+</div>
+
+</div>
+
+
+<div class="product-card" onclick="openGallery('tshirt')">
+
+<div class="product-image">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxAUzwZlevL5IQdCiVp76KUg750Fz_hNxNp3uSFnORGw&s=10"
+alt="Printed T-Shirt">
+
+</div>
+
+<div class="product-info">
+
+<h3>Printed T-Shirts</h3>
+
+<p>
+Custom printed T-shirts.
+</p>
+
+<span class="tag">
+CUSTOM PRINTING
+</span>
+
+</div>
+
+</div>
+
+
+<div class="product-card" onclick="openGallery('bags')">
+
+<div class="product-image">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn9wMhP1P3x_7QuvuBehFX01HUZtp2tfgL4C18x_reSQ&s=10"
+alt="School Bags">
+
+</div>
+
+<div class="product-info">
+
+<h3>School Bags</h3>
+
+<p>
+Stylish and durable school bags.
+</p>
+
+<span class="tag">
+VIEW COLLECTION
+</span>
+
+</div>
+
+</div>
+
+
+<div class="product-card" onclick="openGallery('winter')">
+
+<div class="product-image">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiWmiCCI8oPV9Sz7fJfqONsS8_FnXs277vYUQEzeN7kQ&s=10"
+alt="Winter Collection">
+
+</div>
+
+<div class="product-info">
+
+<h3>Winter Collection</h3>
+
+<p>
+Sweater, blazer, tracksuit, cap & socks.
+</p>
+
+<span class="tag">
+WINTER WEAR
+</span>
+
+</div>
+
+</div>
+
+
+<div class="product-card" onclick="openGallery('supplies')">
+
+<div class="product-image">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxuptYvaUTI_bX12VQf372uqP4Zp4edDQmmIDbvzjXAQ&s"
+alt="School Supplies">
+
+</div>
+
+<div class="product-info">
+
+<h3>School Supplies</h3>
+
+<p>
+Complete school supply requirements.
+</p>
+
+<span class="tag">
+BULK SUPPLY
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHOLESALE -->
+
+<section class="wholesale" id="wholesale">
+
+<div class="wholesale-grid">
+
+<div>
+
+<div class="small-title" style="color:#ff9a3d;">
+FOR SCHOOLS & BUSINESSES
+</div>
+
+<h2>
+Wholesale <span>Orders</span>
+</h2>
+
+<p>
+Schools, institutions, shopkeepers and organizations
+can contact Naitik Garments for bulk orders.
+</p>
+
+<div class="wholesale-list">
+
+<div>✓ School Uniform Bulk Orders</div>
+<div>✓ Books & Stationery Supply</div>
+<div>✓ School Diary Orders</div>
+<div>✓ Custom Printed T-Shirts</div>
+<div>✓ Winter Uniform Bulk Supply</div>
+
+</div>
+
+<br>
+
+<a href="https://wa.me/919304214883?text=Hello%20Naitik%20Garments,%20I%20want%20to%20know%20about%20wholesale%20rates."
+target="_blank"
+class="btn primary">
+
+💬 Get Wholesale Quote
+
+</a>
+
+</div>
+
+
+<div class="wholesale-box">
+
+<h3>Who Can Order?</h3>
+
+<div class="order">
+<span>🏫 Schools</span>
+<strong>Bulk</strong>
+</div>
+
+<div class="order">
+<span>🏢 Institutions</span>
+<strong>Bulk</strong>
+</div>
+
+<div class="order">
+<span>🛍️ Shopkeepers</span>
+<strong>Wholesale</strong>
+</div>
+
+<div class="order">
+<span>🎉 Events</span>
+<strong>Custom</strong>
+</div>
+
+<div class="order">
+<span>👤 Individual Customers</span>
+<strong>Retail</strong>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CUSTOM TSHIRT -->
+
+<section class="custom">
+
+<div class="custom-box">
+
+<div>
+
+<div class="small-title">
+CUSTOM PRINTING
+</div>
+
+<h2>
+Design Your Own
+<br>
+Printed T-Shirt
+</h2>
+
+<p>
+Custom T-shirts for schools, colleges, events,
+teams and organizations.
+</p>
+
+<br>
+
+<a href="https://wa.me/919304214883?text=Hello%20Naitik%20Garments,%20I%20want%20custom%20printed%20T-shirts."
+target="_blank"
+class="btn primary">
+
+👕 Ask for Printing
+
+</a>
+
+</div>
+
+<div class="tshirt">
+👕
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div>
+
+<div class="small-title">
+ABOUT NAITIK GARMENTS
+</div>
+
+<h2>
+Your Trusted Local Store
+</h2>
+
+<p>
+<b>Naitik Garments</b> is based in Lalganj,
+Vaishali, Bihar and provides school uniforms,
+books, stationery, diaries, school bags,
+winter wear and printed T-shirts.
+</p>
+
+<p>
+We serve both <b>individual customers</b>
+and <b>wholesale buyers</b>.
+</p>
+
+<div class="points">
+
+<div class="point">✓ Wholesale Available</div>
+<div class="point">✓ Individual Purchase Available</div>
+<div class="point">✓ Custom T-Shirt Printing</div>
+<div class="point">✓ School & Institutional Supply</div>
+
+</div>
+
+</div>
+
+
+<div class="about-image">
+🏪
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small-title">
+GET IN TOUCH
+</div>
+
+<h2>
+Contact Naitik Garments
+</h2>
+
+<p>
+For product details, rates and orders,
+contact us directly.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>Contact Details</h3>
+
+<div class="contact-item">
+
+<div class="contact-icon">
+📞
+</div>
+
+<div>
+
+<strong>Phone</strong>
+
+<span>
+9304214883
+</span>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+📍
+</div>
+
+<div>
+
+<strong>Address</strong>
+
+<span>
+Lalganj, Vaishali,
+<br>
+Bihar, India
+</span>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+💬
+</div>
+
+<div>
+
+<strong>WhatsApp</strong>
+
+<span>
+Available for enquiries and orders
+</span>
+
+</div>
+
+</div>
+
+
+<div class="buttons">
+
+<a href="tel:9304214883"
+class="btn secondary">
+
+☎ Call Now
+
+</a>
+
+<a href="https://wa.me/919304214883"
+target="_blank"
+class="btn primary">
+
+💬 WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="map">
+
+<div>
+
+<div style="font-size:60px;">
+📍
+</div>
+
+<h3>
+Naitik Garments
+</h3>
+
+<p>
+Lalganj, Vaishali,
+<br>
+Bihar, India
+</p>
+
+<br>
+
+<a href="https://www.google.com/maps/search/?api=1&query=Naitik+Garments+Lalganj+Vaishali+Bihar"
+target="_blank"
+class="btn primary">
+
+🗺️ Open Google Maps
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h2>
+Naitik <span>Garments</span>
+</h2>
+
+<p>
+School Uniform • Books • Stationery • Diaries
+• Printed T-Shirts • Winter Collection
+</p>
+
+<br>
+
+<p>
+Wholesale & Retail Available
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<div class="footer-links">
+
+<a href="#home">Home</a>
+<a href="#categories">Categories</a>
+<a href="#products">Products</a>
+<a href="#wholesale">Wholesale</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h3>Contact</h3>
+
+<div class="footer-links">
+
+<a href="tel:9304214883">
+☎ 9304214883
+</a>
+
+<a href="#contact">
+📍 Lalganj, Vaishali, Bihar
+</a>
+
+<a href="https://wa.me/919304214883"
+target="_blank">
+
+💬 WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© <span id="year"></span>
+Naitik Garments. All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<!-- FLOATING BUTTONS -->
+
+<div class="floating">
+
+<a href="https://wa.me/919304214883"
+target="_blank"
+class="float whatsapp">
+
+💬
+
+</a>
+
+<a href="tel:9304214883"
+class="float phone">
+
+☎
+
+</a>
+
+</div>
+
+
+<!-- GALLERY MODAL -->
+
+<div class="modal" id="galleryModal">
+
+<div class="modal-box">
+
+<button class="close"
+onclick="closeGallery()">
+×
+</button>
+
+<h2 class="modal-title"
+id="modalTitle">
+Products
+</h2>
+
+<div class="gallery"
+id="gallery">
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+document
+.getElementById("navLinks")
+.classList.toggle("active");
+
+}
+
+
+/* PRODUCT GALLERIES */
+
+const galleries = {
+
+uniform:{
+
+title:"School Uniform Collection",
+
+images:[
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUbGCOclK4REecOBnW2vRYeovXLAuJXK1yC8Mu9ZmeMA&s=10",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDS-ouYdqVZGUoYpO7ApXgIVXwUw5cyisHhCANLkeKoA&s=10",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREjBUQPFlLmDhoQZrdS1OjHypldDoxj6EEjCS4rJisNg&s=10",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-MYc35q1OxLA7veNTBIK2XI8L-Y21AmZj13FWmYN0EA&s=10",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5oiL9DtoXcRhpFlvnDLYws9u-bhaHRCKG-ALGFZdM0g&s=10",
+]
+
+},
+
+books:{
+
+title:"School Books Collection",
+
+images:[
+"images/books.jpg",
+"images/books.jpg",
+"images/books.jpg"
+]
+
+},
+
+stationery:{
+
+title:"Stationery Collection",
+
+images:[
+"images/stationery.jpg",
+"images/stationery.jpg",
+"images/stationery.jpg"
+]
+
+},
+
+diary:{
+
+title:"School Diary Collection",
+
+images:[
+"images/diary.jpg",
+"images/diary.jpg",
+"images/diary.jpg"
+]
+
+},
+
+tshirt:{
+
+title:"Printed T-Shirt Collection",
+
+images:[
+"images/tshirt.jpg",
+"images/tshirt.jpg",
+"images/tshirt.jpg"
+]
+
+},
+
+bags:{
+
+title:"School Bags Collection",
+
+images:[
+"images/bags.jpg",
+"images/bags.jpg",
+"images/bags.jpg"
+]
+
+},
+
+winter:{
+
+title:"Winter School Collection",
+
+images:[
+"images/tracksuit.jpg",
+"images/sweater.jpg",
+"images/blazer.jpg",
+"images/cap.jpg",
+"images/socks.jpg"
+]
+
+},
+
+supplies:{
+
+title:"School Supplies",
+
+images:[
+"images/stationery.jpg",
+"images/books.jpg",
+"images/diary.jpg"
+]
+
+}
+
+};
+
+
+/* OPEN GALLERY */
+
+function openGallery(category){
+
+const data = galleries[category];
+
+const modal =
+document.getElementById("galleryModal");
+
+const title =
+document.getElementById("modalTitle");
+
+const gallery =
+document.getElementById("gallery");
+
+title.innerText = data.title;
+
+gallery.innerHTML = "";
+
+data.images.forEach(function(image){
+
+const img =
+document.createElement("img");
+
+img.src = image;
+
+img.alt = data.title;
+
+img.onclick = function(){
+
+window.open(image,"_blank");
+
+};
+
+gallery.appendChild(img);
+
+});
+
+modal.classList.add("active");
+
+}
+
+
+/* CLOSE GALLERY */
+
+function closeGallery(){
+
+document
+.getElementById("galleryModal")
+.classList.remove("active");
+
+}
+
+
+/* CLOSE WHEN CLICKING OUTSIDE */
+
+document
+.getElementById("galleryModal")
+.addEventListener("click",function(e){
+
+if(e.target === this){
+
+closeGallery();
+
+}
+
+});
+
+
+/* YEAR */
+
+document.getElementById("year").innerText =
+new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
+```
